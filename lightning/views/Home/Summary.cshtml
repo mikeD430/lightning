@@ -1,0 +1,126 @@
+﻿@model IEnumerable<lightning.Models.Subject>
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Summary</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+ 
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="" data-placement="left" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "Biology" }, null)'">
+        <h1>@ViewBag.CountBiology  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountBiologyComplete1 / @ViewBag.CountBiologyComplete2 / @ViewBag.CountBiologyComplete3 / @ViewBag.CountBiologyComplete4 / @ViewBag.CountBiologyComplete5 / @ViewBag.CountBiologyComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountBiologyComplete1Yesterday / @ViewBag.CountBiologyComplete2Yesterday / @ViewBag.CountBiologyComplete3Yesterday / @ViewBag.CountBiologyComplete4Yesterday / @ViewBag.CountBiologyComplete5Yesterday / @ViewBag.CountBiologyComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountBiologyComplete1Lastweek / @ViewBag.CountBiologyComplete2Lastweek / @ViewBag.CountBiologyComplete3Lastweek / @ViewBag.CountBiologyComplete4Lastweek / @ViewBag.CountBiologyComplete5Lastweek / @ViewBag.CountBiologyComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:lawngreen">  Biology  TC1=@ViewBag.CountBiologyComplete1</strong></h2>
+    </button>
+
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "Chemistry" }, null)'">
+        <h1>@ViewBag.CountChemistry  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountChemistryComplete1 / @ViewBag.CountChemistryComplete2 / @ViewBag.CountChemistryComplete3 / @ViewBag.CountChemistryComplete4 / @ViewBag.CountChemistryComplete5 / @ViewBag.CountChemistryComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountChemistryComplete1Yesterday / @ViewBag.CountChemistryComplete2Yesterday / @ViewBag.CountChemistryComplete3Yesterday / @ViewBag.CountChemistryComplete4Yesterday / @ViewBag.CountChemistryComplete5Yesterday / @ViewBag.CountChemistryComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountChemistryComplete1Lastweek / @ViewBag.CountChemistryComplete2Lastweek / @ViewBag.CountChemistryComplete3Lastweek / @ViewBag.CountChemistryComplete4Lastweek / @ViewBag.CountChemistryComplete5Lastweek / @ViewBag.CountChemistryComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:aqua">  Chemistry  TC1=@ViewBag.CountChemistryComplete1</strong></h2>
+    </button>
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "Maths" }, null)'">
+        <h1>@ViewBag.CountMaths  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountMathsComplete1 / @ViewBag.CountMathsComplete2 / @ViewBag.CountMathsComplete3 / @ViewBag.CountMathsComplete4 / @ViewBag.CountMathsComplete5 / @ViewBag.CountMathsComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountMathsComplete1Yesterday / @ViewBag.CountMathsComplete2Yesterday / @ViewBag.CountMathsComplete3Yesterday / @ViewBag.CountMathsComplete4Yesterday / @ViewBag.CountMathsComplete5Yesterday / @ViewBag.CountMathsComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountMathsComplete1Lastweek / @ViewBag.CountMathsComplete2Lastweek / @ViewBag.CountMathsComplete3Lastweek / @ViewBag.CountMathsComplete4Lastweek / @ViewBag.CountMathsComplete5Lastweek / @ViewBag.CountMathsComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:blue">  Maths  TC1=@ViewBag.CountMathsComplete1</strong></h2>
+    </button>
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "PE" }, null)'">
+        <h1>@ViewBag.CountPE  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountPEComplete1 / @ViewBag.CountPEComplete2 / @ViewBag.CountPEComplete3 / @ViewBag.CountPEComplete4 / @ViewBag.CountPEComplete5 / @ViewBag.CountPEComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountPEComplete1Yesterday / @ViewBag.CountPEComplete2Yesterday / @ViewBag.CountPEComplete3Yesterday / @ViewBag.CountPEComplete4Yesterday / @ViewBag.CountPEComplete5Yesterday / @ViewBag.CountPEComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountPEComplete1Lastweek / @ViewBag.CountPEComplete2Lastweek / @ViewBag.CountPEComplete3Lastweek / @ViewBag.CountPEComplete4Lastweek / @ViewBag.CountPEComplete5Lastweek / @ViewBag.CountPEComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:red">  PE  TC1=@ViewBag.CountPEComplete1</strong></h2>
+    </button>
+
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "Physics" }, null)'">
+        <h1>@ViewBag.CountPhysics  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountPhysicsComplete1 / @ViewBag.CountPhysicsComplete2 / @ViewBag.CountPhysicsComplete3 / @ViewBag.CountPhysicsComplete4 / @ViewBag.CountPhysicsComplete5 / @ViewBag.CountPhysicsComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountPhysicsComplete1Yesterday / @ViewBag.CountPhysicsComplete2Yesterday / @ViewBag.CountPhysicsComplete3Yesterday / @ViewBag.CountPhysicsComplete4Yesterday / @ViewBag.CountPhysicsComplete5Yesterday / @ViewBag.CountPhysicsComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountPhysicsComplete1Lastweek / @ViewBag.CountPhysicsComplete2Lastweek / @ViewBag.CountPhysicsComplete3Lastweek / @ViewBag.CountPhysicsComplete4Lastweek / @ViewBag.CountPhysicsComplete5Lastweek / @ViewBag.CountPhysicsComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:violet">  Physics  TC1=@ViewBag.CountPhysicsComplete1</strong></h2>
+    </button>
+
+
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus&#10;              sagittis lacus vel augue laoreet rutrum faucibus." data-placement="bottom" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "French" }, null)'">
+        <h1>@ViewBag.CountFrench  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountFrenchComplete1 / @ViewBag.CountFrenchComplete2 / @ViewBag.CountFrenchComplete3 / @ViewBag.CountFrenchComplete4 / @ViewBag.CountFrenchComplete5 / @ViewBag.CountFrenchComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountFrenchComplete1Yesterday / @ViewBag.CountFrenchComplete2Yesterday / @ViewBag.CountFrenchComplete3Yesterday / @ViewBag.CountFrenchComplete4Yesterday / @ViewBag.CountFrenchComplete5Yesterday / @ViewBag.CountFrenchComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountFrenchComplete1Lastweek / @ViewBag.CountFrenchComplete2Lastweek / @ViewBag.CountFrenchComplete3Lastweek / @ViewBag.CountFrenchComplete4Lastweek / @ViewBag.CountFrenchComplete5Lastweek / @ViewBag.CountFrenchComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:brown">  French TC1=@ViewBag.CountFrenchComplete1</strong></h2>
+    </button>
+
+    <button title="" class="btn btn-default" type="button" data-original-title="" data-toggle="popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="right" data-container="body" onclick="location.href='@Url.Action( "SubLook", "Subjects", new { subjectarea = "Geography" }, null)'">
+        <h1>@ViewBag.CountGeography  </h1>
+        <br /> <h5 style="color:cadetblue"><strong>TC:</strong> @ViewBag.CountGeographyComplete1 / @ViewBag.CountGeographyComplete2 / @ViewBag.CountGeographyComplete3 / @ViewBag.CountGeographyComplete4 / @ViewBag.CountGeographyComplete5 / @ViewBag.CountGeographyComplete6 </h5>
+        <br /> <h5 style="color:forestgreen"><strong>24hrs:</strong> @ViewBag.CountGeographyComplete1Yesterday / @ViewBag.CountGeographyComplete2Yesterday / @ViewBag.CountGeographyComplete3Yesterday / @ViewBag.CountGeographyComplete4Yesterday / @ViewBag.CountGeographyComplete5Yesterday / @ViewBag.CountGeographyComplete6Yesterday /  </h5>
+        <br /> <h5 style="color:deeppink"><strong>7days:</strong>   @ViewBag.CountGeographyComplete1Lastweek / @ViewBag.CountGeographyComplete2Lastweek / @ViewBag.CountGeographyComplete3Lastweek / @ViewBag.CountGeographyComplete4Lastweek / @ViewBag.CountGeographyComplete5Lastweek / @ViewBag.CountGeographyComplete6Lastweek </h5>
+        <br /> <h2> <strong style="color:fuchsia">  Geography  TC1=@ViewBag.CountGeographyComplete1</strong></h2>
+    </button>
+
+
+
+    <hr>
+
+
+
+
+
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    
+        <script type="text/javascript">
+            function btnDiagBiology() {
+                $.get('@Url.Action( "SubLook", "Subjects", new { subjectarea = "Biology" }, null)');
+                              
+            }
+            $(document).ready(function () {
+
+                $('div').mouseenter(function () {
+                    $(this).animate({
+                        height: '+=10px'
+                    });
+                });
+                $('div').mouseleave(function () {
+                    $(this).animate({
+                        height: '-=10px'
+                    });
+                });
+                $('div').click(function () {
+                    $(this).toggle(1000);
+                });
+
+            });
+            @* action name, controller, route *@
+
+
+            
+        </script>
+
+    
+</body>
+</html>
+
+
+
+
+

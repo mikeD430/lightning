@@ -1,0 +1,127 @@
+﻿@model IEnumerable<lightning.Models.Subject>
+
+@{
+    ViewBag.Title = "Subject";
+}
+
+<h2>@ViewBag.Area</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+       
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Module)
+        </th>
+        <th>
+            C1
+        </th>
+        <th >
+            C2
+        </th>
+        <th >
+            C3
+        </th>
+        <th >
+            C4
+        </th>
+        <th >
+            C5
+        </th>
+        <th >
+            C6
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            T1
+        </th>
+        <th>
+            T2
+        </th>
+        <th>
+            T3
+        </th>
+        <th>
+            T4
+        </th>
+        <th>
+            T5
+        </th>
+        <th>
+            T6
+        </th>
+        <th style="font-size:6pt">
+            Username
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(model => item.Module)
+            </td>
+            <td class="complete1">
+                @Html.DisplayFor(model => item.complete1, new { htmlAttributes = "class = complete1" })
+            </td>
+            <td class="complete2">
+                @Html.DisplayFor(model => item.complete2)
+            </td>
+            <td class="complete3">
+                @Html.DisplayFor(model => item.complete3)
+            </td>
+            <td class="complete4">
+                @Html.DisplayFor(model => item.complete4)
+            </td>
+            <td class="complete5">
+                @Html.DisplayFor(model => item.complete5)
+            </td>
+            <td class="complete6">
+                @Html.DisplayFor(model => item.complete6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested1)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested2)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested3)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested4)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested5)
+            </td>
+            <td class="tested">
+                @Html.DisplayFor(model => item.tested6)
+            </td>
+            <td style="font-size:6pt">
+                @Html.DisplayFor(model => item.UserName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SubjectID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SubjectID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SubjectID })
+            </td>
+        </tr>
+    }
+
+</table>

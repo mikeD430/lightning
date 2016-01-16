@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Revision</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Lightning", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Summary", "Home")</li>
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Detail Summary", "DetailSummary", "Home")</li>
+                    <li>@Html.ActionLink("Maths", "SubLook", "Subjects", new { subjectarea = "Maths" },null) </li>
+                    <li>@Html.ActionLink("PE", "SubLook", "Subjects", new { subjectarea = "PE" }, null) </li>
+                    <li>@Html.ActionLink("Physics", "SubLook", "Subjects", new { subjectarea = "Physics" }, null) </li>
+                    <li>@Html.ActionLink("Chemistry", "SubLook", "Subjects", new { subjectarea = "Chemistry" }, null) </li>
+                    <li>@Html.ActionLink("Biology", "SubLook", "Subjects", new { subjectarea = "Biology" }, null) </li>
+                    <li>@Html.ActionLink("French", "SubLook", "Subjects", new { subjectarea = "French" }, null) </li>
+                    <li>@Html.ActionLink("Geography", "SubLook", "Subjects", new { subjectarea = "Geography" }, null) </li>*@
+                                        @*
+                                · linkText – The label for the link.
+                                · actionName – The action that is the target of the link.
+                                · routeValues – The set of values passed to the action.
+                                · controllerName – The controller that is the target of the link.
+                                · htmlAttributes – The set of HTML attributes to add to the link.
+                                · protocol – The protocol for the link (for example, https)
+                                · hostname – The host name for the link (for example, www.MyWebsite.com)
+                                · fragment – The fragment (anchor target) for the link. For example, to link to a div in a view with an id of news, you would specify news for the fragment.
+                                        *@
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

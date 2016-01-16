@@ -1,0 +1,161 @@
+﻿@model lightning.Models.Subject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Module)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Module)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.PhotoFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhotoFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageMimeType)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.ImageMimeType)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>*@
+
+        <dt class="vertical-text">
+            C1
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete1)
+        </dd>
+
+        <dt class="vertical-text">
+           C2
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete2)
+        </dd>
+
+        <dt class="vertical-text">
+            C3
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete3)
+        </dd>
+
+        <dt class="vertical-text">
+            C4
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete4)
+        </dd>
+
+        <dt class="vertical-text">
+            C5
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete5)
+        </dd>
+
+        <dt class="vertical-text">
+            C6
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complete6)
+        </dd>
+        <dt class="vertical-text">
+            T1
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested1)
+        </dd>
+
+        <dt class="vertical-text">
+            T2
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested2)
+        </dd>
+
+        <dt class="vertical-text">
+            T3
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested3)
+        </dd>
+
+        <dt class="vertical-text">
+            T4
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested4)
+        </dd>
+
+        <dt class="vertical-text">
+            T5
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested5)
+        </dd>
+
+        <dt class="vertical-text">
+            T6
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tested6)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubjectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

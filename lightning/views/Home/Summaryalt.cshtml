@@ -1,0 +1,131 @@
+﻿@model IEnumerable<lightning.Models.Subject>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Summary</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                
+                <div class="panel status panel-danger">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">@ViewBag.CountBiology</h1>
+                        <br />   5 / 0 / 0 / 0 / 0 / 0 
+                    </div>
+                    <div class="panel-body text-center">
+                        <h2> <strong>  Biology</strong></h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-warning">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">@ViewBag.CountMaths</h1>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Maths</strong>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-success">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">@ViewBag.CountFrench</h1>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>French</strong>
+                    </div>
+                </div>
+
+
+            </div>
+           </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+
+                <div class="panel status panel-danger">
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-center">@ViewBag.CountGeography</h1>
+                    </div>
+                    <div class="panel-body text-center">
+                        <strong>Geography</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container well">
+        <strong>Theme <small>(<a href="http://bootswatch.com/" target="_new">bootswatch.com</a>)</small></strong>
+        <select class="form-control"></select>
+    </div>
+
+   
+    
+    
+    
+</body>
+</html>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+                $('h2').hover(function () {
+                    $('h2').css("background-color", "yellow");
+                                           }, function () {
+                    $('h2').css("background-color", "pink");
+                                           });
+                alert("Hovered ");
+            
+            
+        });
+
+        $.get("http://api.bootswatch.com/3/", function (data) {
+            var themes = data.themes;
+            var select = $("select");
+            select.show();
+
+            themes.forEach(function (value, index) {
+                select.append($("<option />")
+                              .val(index)
+                              .text(value.name));
+            });
+
+            select.change(function () {
+                var theme = themes[$(this).val()];
+                //$( "link" ).attr( 'src', theme.css );
+                $("link").attr("href", theme.css);
+            }).change();
+
+        }, "json").fail(function () {
+            alert("Failure!");
+        });
+    </script>
+
+}
+
+

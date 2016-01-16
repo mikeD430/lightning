@@ -1,0 +1,140 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Oswald);
+
+
+#mydiv {
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#red {
+     height:100px;
+    width:100px;
+    display: inline-block;
+    background-color:#FF0000;
+}
+
+#blue {
+     height:100px;
+    width:100px;
+    display: inline-block;
+    background-color:#0000FF;
+}
+
+#yellow {
+     height:100px;
+    width:100px;
+    display: inline-block;
+    background-color:#E2BE22;
+}
+
+#green {
+     height:100px;
+    width:100px;
+    display: inline-block;
+    background-color:#008800;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.status {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.status .panel-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 45px;
+    padding-top: 20px;
+    letter-spacing: -0.8px;
+}
+
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+#Maths {
+    
+    background-color:#FF0000;
+}
+
+#Physics {
+   
+    background-color: red;
+}
+#Chemistry {
+  
+    background-color: yellow;
+}
+
+#Biology {
+   
+    background-color: blueviolet;
+}
+
+#French {
+    
+    background-color: yellowgreen;
+}
+
+#PE {
+   
+    background-color: darkgoldenrod;
+}
+
+
+#C1 {
+    
+    background-color:orange;
+}
+
+#C2 {
+   
+    background-color: red;
+}
+#C3 {
+  
+    background-color: yellow;
+}
+
+#C4 {
+   
+    background-color: blueviolet;
+}
+
+#C5 {
+    
+    background-color: yellowgreen;
+}
+
+#C6 {
+   
+    background-color: darkgoldenrod;
+}
+
+
